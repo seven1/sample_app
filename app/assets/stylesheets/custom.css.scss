@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
 /* universal */
 
 html {
@@ -7,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 60x;
+  padding-top: 60px;
 }
 
 section {
@@ -20,10 +24,9 @@ textarea {
 
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10 px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 /* typography */
@@ -40,18 +43,19 @@ h1 {
 }
 
 h2 {
-  front-size: 1.7em;
-  letter-spacing: -2px;
-  margin-bottom: 30 px;
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #999;
+  color: $grayLight;
 }
 
 p {
-  font-size:   1.1m;
+  font-size: 1.1em;
   line-height: 1.7em;
 }
+
 
 /* header */
 
@@ -59,41 +63,40 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: white;
   text-transform: uppercase;
-  letter-spaceing: -1px;
+  letter-spacing: -1px;
   padding-top: 9px;
-  front-weight: bold;
-  line-height:1 ;
-}
-
-#logo:hover {
-  color: #ff;
-  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 /* footer */
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #999;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
 }
